@@ -1,0 +1,15 @@
+{
+  "name": "xlata-pdv-offline",
+  "version": "1.1.0",
+  "private": true,
+  "description": "XLata PDV Offline - sistema standalone com Express + SQLite (sql.js). Modo direto, sem login.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.19.2",
+    "cookie-parser": "1.4.6",
+    "sql.js": "1.10.3"
+  }
+}

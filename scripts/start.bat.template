@@ -1,0 +1,73 @@
+@echo off
+setlocal
+title XLata PDV Offline
+cd /d "%~dp0"
+
+echo ========================================
+echo   XLata PDV Offline - Iniciando...
+echo ========================================
+echo.
+
+REM --- Detecta Node.js ---
+where node >nul 2>nul
+if %errorlevel% neq 0 goto :no_node
+
+REM --- Instala dependencias se necessario ---
+if not exist "node_modules\sql.js" goto :install_deps
+goto :start_server
+
+:install_deps
+echo Instalando dependencias (apenas na primeira execucao)...
+echo Isso pode levar alguns minutos. Aguarde...
+echo.
+cmd /c "npm install --omit=dev --no-audit --no-fund >> start.log 2>&1"
+if %errorlevel% neq 0 goto :install_failed
+echo [OK] Dependencias instaladas.
+echo.
+goto :start_server
+
+:start_server
+echo Abrindo navegador em http://localhost:3939 ...
+start "" http://localhost:3939
+echo.
+echo ========================================
+echo   Servidor rodando em localhost:3939
+echo   Pressione Ctrl+C para encerrar.
+echo   Logs salvos em start.log
+echo ========================================
+echo.
+node server.js
+echo.
+echo [Servidor encerrado]
+echo.
+pause
+exit /b 0
+
+:no_node
+echo.
+echo ========================================
+echo   [ERRO] Node.js NAO encontrado!
+echo ========================================
+echo.
+echo Para usar o XLata PDV Offline voce precisa
+echo instalar o Node.js LTS:
+echo.
+echo   https://nodejs.org/
+echo.
+echo Apos instalar, feche esta janela e execute
+echo o start.bat novamente.
+echo.
+pause
+exit /b 1
+
+:install_failed
+echo.
+echo ========================================
+echo   [ERRO] Falha ao instalar dependencias
+echo ========================================
+echo.
+echo Verifique sua conexao de internet e o
+echo arquivo start.log para detalhes do erro.
+echo.
+pause
+exit /b 1

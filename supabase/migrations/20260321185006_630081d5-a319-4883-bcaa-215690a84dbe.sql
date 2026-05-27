@@ -1,0 +1,1 @@
+ALTER TABLE public.subscription_plans ADD COLUMN IF NOT EXISTS tier text NOT NULL DEFAULT 'pro';

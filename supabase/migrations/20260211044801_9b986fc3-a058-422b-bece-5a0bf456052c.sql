@@ -1,0 +1,1 @@
+ALTER TABLE public.shop_products ADD COLUMN delivery_type TEXT DEFAULT 'pickup';

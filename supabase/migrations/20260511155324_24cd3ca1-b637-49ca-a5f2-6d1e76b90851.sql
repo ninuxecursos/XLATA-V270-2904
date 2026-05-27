@@ -1,0 +1,1 @@
+ALTER TABLE public.admin_system_config ADD COLUMN IF NOT EXISTS employee_slot_price NUMERIC(10,2) NOT NULL DEFAULT 79.90;

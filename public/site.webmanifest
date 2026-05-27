@@ -1,0 +1,104 @@
+{
+  "name": "XLata — Sistema para Depósito de Reciclagem e Sucata",
+  "short_name": "XLata",
+  "description": "Sistema profissional para depósito de reciclagem e sucata: PDV, comprovantes, estoque, relatórios, compras e vendas.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#10B981",
+  "categories": ["business", "productivity", "finance"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/maskable_icon_x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable_icon_x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable_icon_x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable_icon_x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/maskable_icon_x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lovable-uploads/xlata.site_logotipo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "PDV",
+      "short_name": "PDV",
+      "description": "Abrir ponto de venda",
+      "url": "/",
+      "icons": [{ "src": "/icons/maskable_icon_x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Painel",
+      "description": "Ver painel de controle",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icons/maskable_icon_x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Compras",
+      "short_name": "Compras",
+      "description": "Ver pedidos de compra",
+      "url": "/purchase-orders",
+      "icons": [{ "src": "/icons/maskable_icon_x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Vendas",
+      "short_name": "Vendas",
+      "description": "Ver pedidos de venda",
+      "url": "/sales-orders",
+      "icons": [{ "src": "/icons/maskable_icon_x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/capa_xlata.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "XLata - Sistema para Depósito de Reciclagem"
+    }
+  ]
+}

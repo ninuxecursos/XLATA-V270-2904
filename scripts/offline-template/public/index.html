@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>XLata PDV Offline - Login</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="login-bg">
+  <div class="login-card">
+    <div class="logo">XLata <span>PDV Offline</span></div>
+    <p class="subtitle">Acesso restrito - Plano Basico Offline</p>
+    <form id="loginForm">
+      <label>Usuario</label>
+      <input id="username" autocomplete="username" required />
+      <label>Senha</label>
+      <input id="password" type="password" autocomplete="current-password" required />
+      <button type="submit">Entrar</button>
+      <div id="err" class="err"></div>
+    </form>
+    <div class="lic" id="lic"></div>
+  </div>
+<script>
+fetch('/api/license').then(r=>r.json()).then(l=>{
+  document.getElementById('lic').textContent =
+    `Cliente: ${l.user} - Licenca: ${l.license} - Validade: ${l.expires} ${l.valid?'(ativa)':'(EXPIRADA)'}`;
+});
+document.getElementById('loginForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+  const r = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username,password})});
+  const j = await r.json();
+  if(!r.ok){ document.getElementById('err').textContent = j.error || 'Erro'; return; }
+  localStorage.setItem('xlata_token', j.token);
+  localStorage.setItem('xlata_user', j.user);
+  location.href = '/pdv.html';
+});
+</script>
+</body>
+</html>

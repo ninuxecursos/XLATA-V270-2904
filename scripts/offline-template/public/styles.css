@@ -1,0 +1,74 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b1220; --panel:#111827; --panel2:#1f2937; --line:#1f2937;
+  --text:#e5e7eb; --muted:#94a3b8;
+  --green:#22c55e; --green-d:#16a34a; --green-bg:rgba(34,197,94,.1);
+  --red:#ef4444;
+}
+html,body{background:var(--bg);color:var(--text);font-family:-apple-system,Segoe UI,Roboto,Inter,sans-serif;min-height:100vh}
+button{cursor:pointer;border:none;font:inherit}
+input,select,textarea{font:inherit}
+
+/* Login */
+.login-bg{display:flex;align-items:center;justify-content:center;min-height:100vh;
+  background:radial-gradient(ellipse at top,rgba(34,197,94,.15),transparent 60%),var(--bg)}
+.login-card{background:var(--panel);padding:32px;border-radius:16px;border:1px solid var(--line);width:380px;max-width:92vw;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.logo{font-size:28px;font-weight:800;color:var(--green)}
+.logo span{color:var(--text);font-weight:600}
+.subtitle{color:var(--muted);margin:4px 0 20px;font-size:14px}
+.login-card label{display:block;color:var(--muted);font-size:13px;margin:12px 0 6px}
+.login-card input{width:100%;height:44px;padding:0 12px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+.login-card input:focus{outline:none;border-color:var(--green)}
+.login-card button{width:100%;height:46px;border-radius:10px;background:var(--green);color:#04130a;font-weight:700;margin-top:20px}
+.login-card button:hover{background:var(--green-d);color:#fff}
+.err{color:var(--red);margin-top:10px;font-size:13px;min-height:18px}
+.lic{margin-top:18px;font-size:11px;color:var(--muted);text-align:center;border-top:1px dashed var(--line);padding-top:12px}
+
+/* App */
+.topbar{display:flex;align-items:center;gap:24px;padding:14px 24px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.brand{font-weight:800;color:var(--green);font-size:20px}
+.brand span{color:var(--text);font-weight:600;font-size:14px;margin-left:6px}
+.tabs{display:flex;gap:6px;flex:1}
+.tabs button{background:transparent;color:var(--muted);padding:8px 14px;border-radius:8px;font-weight:600;font-size:14px}
+.tabs button:hover{color:var(--text);background:var(--panel2)}
+.tabs button.active{background:var(--green-bg);color:var(--green)}
+.user{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
+.user button{background:var(--panel2);color:var(--text);padding:6px 12px;border-radius:8px;font-size:13px}
+
+main{padding:24px;max-width:1200px;margin:0 auto}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h2{font-size:16px;margin-bottom:14px;color:var(--text)}
+.field{margin-bottom:12px}
+.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.field input,.field select{width:100%;height:40px;padding:0 12px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--green)}
+.btn{background:var(--green);color:#04130a;font-weight:700;padding:10px 16px;border-radius:8px}
+.btn:hover{background:var(--green-d);color:#fff}
+.btn-ghost{background:var(--panel2);color:var(--text);padding:8px 14px;border-radius:8px}
+.btn-danger{background:transparent;color:var(--red);padding:6px 10px;border-radius:6px;border:1px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase}
+tbody tr:hover{background:rgba(255,255,255,.02)}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.kpi .card{padding:16px}
+.kpi .label{color:var(--muted);font-size:12px;text-transform:uppercase}
+.kpi .value{font-size:24px;font-weight:800;margin-top:4px}
+.value.green{color:var(--green)}
+.value.red{color:var(--red)}
+.empty{color:var(--muted);text-align:center;padding:30px;font-size:14px}
+.cart-total{display:flex;justify-content:space-between;font-size:20px;font-weight:800;padding:14px 0;border-top:2px solid var(--green);margin-top:10px}
+
+/* Print */
+@media print{
+  .topbar,.tabs,.user,.no-print{display:none !important}
+  body,html{background:#fff !important;color:#000 !important}
+  main{padding:0;max-width:100%}
+  .card{border:1px solid #ddd;background:#fff;color:#000}
+  .card h2{color:#000}
+  th,td{color:#000;border-bottom:1px solid #ccc}
+  th{color:#444}
+  .value.green{color:#16a34a}
+  .value.red{color:#dc2626}
+}

@@ -1,0 +1,139 @@
+project_id = "oxawvjcckmbevjztyfgp"
+
+[functions.webhook-mercado-pago]
+verify_jwt = false
+
+[functions.create-pix-payment]
+verify_jwt = true
+
+[functions.get-payment-status]
+verify_jwt = true
+
+[functions.get-admin-payments]
+verify_jwt = true
+
+[functions.get-system-stats]
+verify_jwt = true
+
+[functions.check-rate-limit]
+verify_jwt = false
+
+[functions.generate-sitemap]
+verify_jwt = false
+
+[functions.export-user-data]
+verify_jwt = true
+
+[functions.follow-up-pending-pix]
+verify_jwt = false
+
+[functions.generate-article-image]
+verify_jwt = true
+
+[functions.create-employee-user]
+verify_jwt = false
+
+[functions.test-payment-connection]
+verify_jwt = true
+
+[functions.generate-seo-article]
+verify_jwt = true
+
+[functions.auto-publish-articles]
+verify_jwt = false
+
+[functions.test-ai-connection]
+verify_jwt = true
+
+[functions.create-card-payment]
+verify_jwt = true
+
+[functions.generate-local-seo-content]
+verify_jwt = true
+
+[functions.process-interactive-events]
+verify_jwt = false
+
+[functions.create-shop-pix-payment]
+verify_jwt = false
+
+[functions.create-shop-card-payment]
+verify_jwt = false
+
+[functions.webhook-telegram-products]
+verify_jwt = false
+
+[functions.telegram-set-webhook]
+verify_jwt = true
+
+[functions.telegram-test-bot]
+verify_jwt = true
+
+[functions.process-telegram-product]
+verify_jwt = true
+
+[functions.process-telegram-block]
+verify_jwt = true
+
+[functions.transcribe-audio]
+verify_jwt = false
+
+[functions.generate-product-studio-image]
+verify_jwt = true
+
+[functions.pinterest-oauth]
+verify_jwt = false
+
+[functions.pinterest-callback]
+verify_jwt = false
+
+[functions.pinterest-publish-pin]
+verify_jwt = false
+
+[functions.get-client-ip]
+verify_jwt = false
+
+[functions.cleanup-abandoned-orders]
+verify_jwt = false
+
+[functions.admin-confirm-user]
+verify_jwt = false
+
+[functions.reconstruct-article]
+verify_jwt = true
+
+[functions.check-google-ranking]
+verify_jwt = true
+
+[functions.check-indexation]
+verify_jwt = true
+
+[functions.seo-optimizer]
+verify_jwt = true
+
+[functions.discover-keywords]
+verify_jwt = true
+
+[functions.estimate-article-potential]
+verify_jwt = true
+
+[functions.calculate-article-revenue]
+verify_jwt = false
+
+[functions.scale-content]
+verify_jwt = true
+
+[functions.smart-audit]
+verify_jwt = true
+
+[functions.growth-engine]
+verify_jwt = true
+
+[functions.scan-product-image]
+verify_jwt = false
+
+[functions.ping-search-engines]
+verify_jwt = false
+
+[functions.indexnow-key]
+verify_jwt = false

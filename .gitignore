@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build artifacts pesados (gerados por scripts/build-offline-template.sh)
+*.zip
+public/downloads/*.zip
+!public/downloads/.gitkeep
+/xlata-pdv-offline-template.zip
+/offline-artifacts/
+
+# Output do build offline (regerado por vite.config.offline.ts)
+dist-offline/

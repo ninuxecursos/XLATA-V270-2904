@@ -1,0 +1,4 @@
+Contact: mailto:contato@xlata.site
+Encryption: https://xlata.site/pgp-key.txt
+Canonical: https://xlata.site/.well-known/security.txt
+Preferred-Languages: pt-BR, en

@@ -1,0 +1,66 @@
+User-agent: *
+Allow: /
+
+# Páginas públicas indexáveis
+Allow: /blog
+Allow: /ajuda
+Allow: /solucoes
+Allow: /glossario
+Allow: /planos
+Allow: /sistema-para-ferro-velho
+Allow: /sistema-para-ferro-velho-em-*
+Allow: /sistema-para-reciclagem-em-*
+Allow: /sistema-para-sucata-em-*
+Allow: /sistema-para-deposito-em-*
+Allow: /reciclagem/
+Allow: /shop
+Allow: /shop/*
+
+# Páginas privadas - NÃO INDEXAR
+Disallow: /admin
+Disallow: /covildomal
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+Disallow: /dashboard
+Disallow: /pdv
+Disallow: /materiais
+Disallow: /configuracoes
+Disallow: /clientes
+Disallow: /funcionarios
+Disallow: /transacoes
+Disallow: /transactions
+Disallow: /estoque
+Disallow: /current-stock
+Disallow: /vendas
+Disallow: /sales-orders
+Disallow: /compras
+Disallow: /purchase-orders
+Disallow: /despesas
+Disallow: /expenses
+Disallow: /fluxo-caixa
+Disallow: /daily-flow
+Disallow: /adicoes-caixa
+Disallow: /cash-additions
+Disallow: /indicacoes
+Disallow: /sistema-indicacoes
+Disallow: /guia-completo
+Disallow: /relatar-erro
+Disallow: /pix-payments
+Disallow: /shop-cms
+Disallow: /instalar
+
+# Diretórios internos
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /api/
+
+# Crawl-delay para bots agressivos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# SITEMAP OFICIAL
+Sitemap: https://xlata.site/sitemap.xml

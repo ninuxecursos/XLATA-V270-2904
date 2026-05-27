@@ -1,0 +1,11 @@
+export { LandingHero } from './LandingHero';
+export { LandingHowItWorks } from './LandingHowItWorks';
+export { LandingRequirements } from './LandingRequirements';
+export { LandingProblems } from './LandingProblems';
+export { LandingKPIs } from './LandingKPIs';
+export { LandingVideos } from './LandingVideos';
+export { LandingTestimonials } from './LandingTestimonials';
+export { LandingPlans } from './LandingPlans';
+export { LandingFAQ } from './LandingFAQ';
+export { LandingCTAFinal } from './LandingCTAFinal';
+export { LandingFooter } from './LandingFooter';
